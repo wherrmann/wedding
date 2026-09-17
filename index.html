@@ -7,51 +7,198 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   body{margin:0;}
   ::selection{background:#c9b8a3;color:#2e2c26;}
+  a{color:#2e2c26;}
+  a:hover{color:#6f7a5c;}
   @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
   @keyframes growLine{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+  .sec{scroll-margin-top:92px;}
+  #travel p a:hover,#transport p a:hover{color:#6f7a5c !important;text-decoration-color:rgba(111,122,92,0.85) !important;}
+  #book-link:hover{background:#5a6349 !important;}
+  @media (max-width:900px){
+    .nav-links{gap:22px !important;}
+    .two-col{grid-template-columns:1fr !important;gap:44px !important;}
+  }
   @media (max-width:640px){
     .std-names{font-size:68px !important;}
     .std-card{padding:32px 26px !important;max-width:none !important;width:100%;}
-    .std-hero{flex-direction:column !important;justify-content:flex-start !important;align-items:center !important;padding:40px 20px 24px !important;background-position:26% 78% !important;}
+    .std-hero{flex-direction:column !important;justify-content:flex-start !important;align-items:center !important;padding:96px 20px 24px !important;background-position:26% 78% !important;}
     .std-eyebrow{margin:0 0 14px !important;font-size:15px !important;letter-spacing:2.5px !important;}
     .std-rule1{margin:18px auto !important;}
     .std-sub{font-size:25px !important;}
     .std-venue{font-size:15px !important;margin:12px 0 0 !important;}
-    .std-rule2{margin:22px 0 !important;}
     .std-body{font-size:20px !important;line-height:1.6 !important;}
-    .std-contact{margin:20px 0 0 !important;}
+    .sec{padding:72px 22px !important;}
+    .nav-links{gap:16px !important;}
+    .nav-links a{font-size:13px !important;letter-spacing:1.6px !important;}
+    .sec-h{font-size:44px !important;}
   }
 </style>
 </head>
 <body>
 
-<div style="font-family:'Cormorant Garamond',Georgia,serif;color:#2e2c26;background:#2e2c26;min-height:100vh;">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;color:#2e2c26;background:#f5f0e6;overflow-x:hidden;">
 
-  <div class="std-hero" style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:flex-end;text-align:center;padding:48px 6vw;background-image:linear-gradient(90deg,rgba(34,32,26,0.05) 0%,rgba(34,32,26,0.02) 55%,rgba(34,32,26,0.28) 100%),url('assets/wedding-backdrop.jpg');background-size:cover;background-position:center 62%;">
+  <nav id="site-nav" style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 5vw;background:transparent;border-bottom:1px solid transparent;transition:background .35s ease,padding .35s ease,border-color .35s ease;">
+    <a href="#top" data-navlink="1" style="text-decoration:none;color:#f5f0e6;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;letter-spacing:1px;white-space:nowrap;transition:color .35s ease;">A<span style="font-style:italic;font-weight:400;font-size:0.7em;display:inline-block;margin:0 0.18em;">&amp;</span>W</a>
+    <div class="nav-links" style="display:flex;gap:34px;align-items:center;">
+      <a href="#travel" data-navlink="1" style="text-decoration:none;color:#f5f0e6;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:2.5px;text-transform:uppercase;white-space:nowrap;transition:color .35s ease;">Lodging</a>
+      <a href="#transport" data-navlink="1" style="text-decoration:none;color:#f5f0e6;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:2.5px;text-transform:uppercase;white-space:nowrap;transition:color .35s ease;">Travel</a>
+    </div>
+  </nav>
 
-    <div class="std-card" style="animation:fadeIn 1.2s ease both;background:rgba(245,240,230,0.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.35);padding:76px 80px;border-radius:2px;box-shadow:0 30px 80px rgba(0,0,0,0.35);max-width:560px;">
-
-      <p class="std-eyebrow" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:5px;text-transform:uppercase;color:#6b6457;margin:0 0 22px;">Save the Date&nbsp;<br>to celebrate the wedding of</p>
-
+  <div id="top" class="std-hero" style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:flex-end;text-align:center;padding:132px 6vw 56px;background-image:linear-gradient(90deg,rgba(34,32,26,0.05) 0%,rgba(34,32,26,0.02) 55%,rgba(34,32,26,0.28) 100%),url('assets/wedding-backdrop.jpg');background-size:cover;background-position:center 62%;">
+    <div style="position:absolute;top:0;left:0;right:0;height:180px;background:linear-gradient(180deg,rgba(34,32,26,0.45),rgba(34,32,26,0));pointer-events:none;"></div>
+    <div class="std-card" style="position:relative;animation:fadeIn 1.2s ease both;background:rgba(245,240,230,0.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.35);padding:76px 80px;border-radius:2px;box-shadow:0 30px 80px rgba(0,0,0,0.35);max-width:560px;">
+      <p class="std-eyebrow" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:5px;text-transform:uppercase;color:#6b6457;margin:0 0 22px;">The wedding of</p>
       <h1 class="std-names" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:100px;line-height:0.92;color:#2e2c26;margin:0;letter-spacing:1px;">Abby<span style="font-style:italic;font-weight:400;font-size:0.6em;display:inline-block;margin:0 0.16em;vertical-align:0.03em;">&amp;</span>Will</h1>
-
       <div class="std-rule1" style="width:64px;height:1px;background:rgba(111,122,92,0.35);margin:34px auto;transform-origin:center;animation:growLine 1.4s .4s ease both;"></div>
-
       <p class="std-sub" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;letter-spacing:2px;color:#2e2c26;margin:0;text-transform:uppercase;font-feature-settings:'lnum';">June 12, 2027</p>
       <p class="std-venue" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:3px;text-transform:uppercase;color:#6b6457;margin:16px 0 0;">The Inn at West Settlement<br>Roxbury, New York</p>
-
-      <p class="std-body" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.7;color:#6b6457;margin:36px 0 0;">Formal invitation with details to follow.&nbsp;<br>For now, mark the day — we can't wait to celebrate with you in the Catskills.</p>
-
+      <p class="std-body" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.7;color:#6b6457;margin:36px 0 0;">Lodging and travel details are below so you can book early. Invitations and the full weekend schedule will follow.</p>
     </div>
-
   </div>
 
+  <!-- TRAVEL -->
+  <section id="travel" class="sec" style="padding:120px 24px;background:#f5f0e6;">
+    <div style="max-width:920px;margin:0 auto;">
+
+      <div style="text-align:center;margin-bottom:64px;">
+        <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:5px;text-transform:uppercase;color:#6b6457;margin:0 0 18px;">Where to stay</p>
+        <h2 class="sec-h" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:64px;line-height:1;letter-spacing:1px;margin:0;color:#2e2c26;">Lodging</h2>
+        <div style="width:64px;height:1px;background:rgba(111,122,92,0.35);margin:32px auto 0;"></div>
+      </div>
+
+      <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.7;color:#6b6457;margin:0 0 34px;">The Catskills are a popular vacation and wedding destination in the summer, so we recommend booking 4-6 months in advance.</p>
+
+      <div style="background:rgba(255,255,255,0.5);border:1px solid rgba(111,122,92,0.28);border-radius:2px;padding:40px 44px;margin:0 0 48px;">
+        <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.7;color:#2e2c26;margin:0 0 26px;">We have reserved the&nbsp;<a href="https://gatewaypinehill.com/" target="_blank" style="color:#2e2c26;font-weight:500;text-decoration:underline;text-decoration-color:rgba(111,122,92,0.5);text-underline-offset:3px;">Gateway Lodge at Pine Hill</a>&nbsp;for our guests. This is a relatively small property with only 11 rooms, so we anticipate it booking up quickly.</p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;">
+            <span style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:3px;text-transform:uppercase;color:#6b6457;min-width:150px;">How to Book</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;line-height:1.6;color:#2e2c26;flex:1;min-width:240px;">Use the link below to book. You can also call the lodge to book and mention the Herrmann-Kerson wedding.</span>
+          </div><a id="book-link" href="https://app.mews.com/distributor/ef87b8d5-b29d-4f26-9108-b437012b8d9c?mewsAvailabilityBlockId=359ed40c-61b9-4419-90a9-b4b80009f131&amp;mewsStart=2027-06-11&amp;mewsEnd=2027-06-13" target="_blank" style="display:inline-block;margin:30px 0 0;text-decoration:none;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:2.5px;text-transform:uppercase;color:#f5f0e6;background:#6f7a5c;padding:14px 32px;transition:background .25s;">Book Our Hotel Block Here</a>
+      </div>
+
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:4px;text-transform:uppercase;color:#6b6457;margin:0 0 18px;">Other Nearby Options</h3>
+      <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.7;color:#6b6457;margin:0 0 30px;">There are plenty of other great options nearby. We recommend looking into:</p>
+
+      <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(111,122,92,0.28);">
+        <div style="padding:22px 0;border-bottom:1px solid rgba(111,122,92,0.28);">
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:23px;line-height:1.3;margin:0 0 6px;"><a href="https://margaretvilleinn.com/" target="_blank" style="color:#2e2c26;text-decoration:underline;text-decoration-color:rgba(111,122,92,0.5);text-underline-offset:3px;">Margaretville Mountain Inn</a></p>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;line-height:1.65;color:#6b6457;margin:0;">A quaint bed and breakfast with affordable rates, planned shuttle stop (see below)</p>
+        </div>
+        <div style="padding:22px 0;border-bottom:1px solid rgba(111,122,92,0.28);">
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:23px;line-height:1.3;margin:0 0 6px;"><a href="https://www.catskillseasonsinn.com/" target="_blank" style="color:#2e2c26;text-decoration:underline;text-decoration-color:rgba(111,122,92,0.5);text-underline-offset:3px;">Catskills Season Lodge</a></p>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;line-height:1.65;color:#6b6457;margin:0;">A nearby inn with a pool!</p>
+        </div>
+        <div style="padding:22px 0;border-bottom:1px solid rgba(111,122,92,0.28);">
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:23px;line-height:1.3;margin:0 0 6px;"><a href="https://www.shandakeninn.com/" target="_blank" style="color:#2e2c26;text-decoration:underline;text-decoration-color:rgba(111,122,92,0.5);text-underline-offset:3px;">Shandaken Inn</a></p>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;line-height:1.65;color:#6b6457;margin:0;">Beautiful upscale inn with a pool and tennis courts!</p>
+        </div>
+        <div style="padding:22px 0;border-bottom:1px solid rgba(111,122,92,0.28);">
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:23px;line-height:1.3;margin:0 0 6px;"><a href="https://www.breezyhillinn.com/" target="_blank" style="color:#2e2c26;text-decoration:underline;text-decoration-color:rgba(111,122,92,0.5);text-underline-offset:3px;">Breezy Hill Inn</a></p>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;line-height:1.65;color:#6b6457;margin:0;">Where we stayed on our venue hunt trip - delicious breakfast and helpful hosts! It is up a small hill so will likely not be a shuttle stop.</p>
+        </div>
+        <div style="padding:22px 0;border-bottom:1px solid rgba(111,122,92,0.28);">
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:23px;line-height:1.3;margin:0 0 6px;"><a href="https://www.theroxburyexperience.com/" target="_blank" style="color:#2e2c26;text-decoration:underline;text-decoration-color:rgba(111,122,92,0.5);text-underline-offset:3px;">The Roxbury Experience</a></p>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;line-height:1.65;color:#6b6457;margin:0;">Very eclectic “experience” hotel with themed rooms, you have been warned! Also the closest accommodations&nbsp;to the wedding venue and a planned shuttle stop.</p>
+        </div>
+        <div style="padding:22px 0;border-bottom:1px solid rgba(111,122,92,0.28);">
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:23px;line-height:1.3;margin:0 0 6px;">Rentals</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;line-height:1.65;color:#6b6457;margin:0;">Airbnb and VRBO rentals are widely available in the Roxbury area.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:52vh;min-height:340px;background-image:linear-gradient(0deg,rgba(34,32,26,0.18),rgba(34,32,26,0.04)),url('assets/pretty.jpg');background-size:cover;background-position:center 38%;"></div>
+
+  <!-- TRANSPORT -->
+  <section id="transport" class="sec" style="padding:120px 24px;background:#f5f0e6;">
+    <div style="max-width:920px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:60px;">
+        <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:5px;text-transform:uppercase;color:#6b6457;margin:0 0 18px;">Getting here</p>
+        <h2 class="sec-h" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:64px;line-height:1;letter-spacing:1px;margin:0;color:#2e2c26;">Transportation</h2>
+        <div style="width:64px;height:1px;background:rgba(111,122,92,0.35);margin:32px auto 0;"></div>
+      </div>
+
+      <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:4px;text-transform:uppercase;color:#6b6457;margin:0 0 18px;">The Shuttle</h3>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.7;color:#6b6457;margin:0 0 18px;">We are providing a shuttle service to and from the wedding so everyone can celebrate safely.</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.7;color:#6b6457;margin:0 0 40px;">Because our guests are staying in a few different places, the final shuttle stops and pickup times will depend on where everyone books. As of now, we plan for shuttle stops at Gateway Lodge, Margaretville Mountain Inn, and the Roxbury Experience. Additional stops will be added pending where everyone books.</p>
+          <div>
+            <div>
+              <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:3px;text-transform:uppercase;color:#2e2c26;margin:0 0 6px;">Final Schedule</p>
+              <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;line-height:1.65;color:#6b6457;margin:0;">Once we have everyone's lodging details, we will finalize the route and post the exact pickup times right here on this page closer to the wedding date.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:4px;text-transform:uppercase;color:#6b6457;margin:0 0 18px;">Airports</h3>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.7;color:#6b6457;margin:0 0 40px;">Albany is the closest airport, about a 1.5 hour drive away. Otherwise it is a 3.5 hour drive from the NYC airports.</p>
+
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:4px;text-transform:uppercase;color:#6b6457;margin:0 0 18px;">Driving &amp; Parking</h3>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.7;color:#6b6457;margin:0 0 26px;">If you prefer to drive yourself, there is plenty of complimentary parking available on-site at the venue.</p>
+          <div style="border:1px solid rgba(111,122,92,0.28);border-radius:2px;padding:28px 30px;background:rgba(255,255,255,0.5);">
+            <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:3px;text-transform:uppercase;color:#6b6457;margin:0 0 8px;">Venue Address</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.6;color:#2e2c26;margin:0;"><span>The Inn at West Settlement<br>1117 Andrew Gray Road<br>Roxbury, NY 12474</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding:120px 24px;background:#efe9dc;">
+    <div class="two-col" style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:0.85fr 1fr;gap:72px;align-items:center;">
+      <div style="padding:14px;border:1px solid rgba(111,122,92,0.35);border-radius:2px;">
+        <img src="assets/dancing-queen.jpg" alt="Abby and Will dancing beneath the cypresses" style="width:100%;height:auto;display:block;border-radius:1px;">
+      </div>
+      <div>
+        <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:5px;text-transform:uppercase;color:#6b6457;margin:0 0 18px;">More to come</p>
+        <h2 class="sec-h" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:64px;line-height:1;letter-spacing:1px;margin:0 0 26px;color:#2e2c26;">See you in June</h2>
+        <div style="width:64px;height:1px;background:rgba(111,122,92,0.35);margin:0 0 26px;"></div>
+        <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.7;color:#6b6457;margin:0;">Formal invitations, the weekend schedule, and the details for replying will follow. For now, this page has what you need to book travel and a place to stay.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#2e2c26;text-align:center;padding:72px 24px 56px;">
+    <p style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:52px;line-height:1;color:#f5f0e6;margin:0;letter-spacing:1px;">Abby<span style="font-style:italic;font-weight:400;font-size:0.6em;display:inline-block;margin:0 0.16em;">&amp;</span>Will</p>
+    <div style="width:64px;height:1px;background:rgba(245,240,230,0.3);margin:30px auto;"></div>
+    <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;letter-spacing:2px;text-transform:uppercase;color:#f5f0e6;margin:0;font-feature-settings:'lnum';">June 12, 2027</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;letter-spacing:3px;text-transform:uppercase;color:#9a9281;margin:14px 0 0;">The Inn at West Settlement, Roxbury New York</p>
+  </footer>
+
 </div>
+
+<script>
+  (function () {
+    var nav = document.getElementById('site-nav');
+    if (!nav) return;
+    function apply() {
+      var solid = window.scrollY > 24;
+      nav.style.background = solid ? 'rgba(245,240,230,0.93)' : 'transparent';
+      nav.style.backdropFilter = solid ? 'blur(8px)' : 'none';
+      nav.style.webkitBackdropFilter = solid ? 'blur(8px)' : 'none';
+      nav.style.borderBottomColor = solid ? 'rgba(111,122,92,0.22)' : 'transparent';
+      nav.style.padding = solid ? '16px 5vw' : '26px 5vw';
+      nav.querySelectorAll('[data-navlink]').forEach(function (a) {
+        a.style.color = solid ? '#2e2c26' : '#f5f0e6';
+        a.style.textShadow = solid ? 'none' : '0 1px 12px rgba(34,32,26,0.45)';
+      });
+    }
+    apply();
+    window.addEventListener('scroll', apply, { passive: true });
+    window.addEventListener('resize', apply);
+  })();
+</script>
 
 </body>
 </html>
